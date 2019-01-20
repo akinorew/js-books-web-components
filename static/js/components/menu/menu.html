@@ -1,0 +1,79 @@
+<template>
+    <style>
+        :host {
+            display: inline-block;
+            float: left;
+            width: 20%;
+        }
+
+        @media only screen and (max-width: 760px) {
+            :host {
+                margin-bottom: 2rem;
+                width: 100%;
+            }
+        }
+
+        .menu .menu__items {
+            padding: 0;
+        }
+
+        .menu .menu__items li {
+            list-style: none;
+        }
+
+        .item__pages {
+            display: flex;
+        }
+
+        .pages__sort {
+            border: 1px solid #FFF;
+            margin: 0 10px;
+            padding: 5px;
+            width: 30px;
+        }
+
+        .pages__sort::-webkit-outer-spin-button,
+        .pages__sort::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .menu__clear {
+            text-align: center;
+        }
+
+        .clear__button {
+            background-color: #AAA;
+            border: none;
+            border-radius: 5px;
+            color: #FFF;
+            font-weight: bold;
+            height: 2rem;
+            outline: none;
+            width: 4rem;
+        }
+
+        .clear__button:active {
+            background-color: #FFF;
+            color: #AAA;
+        }
+
+    </style>
+    <div class="menu">
+        <h2>Sort after</h2>
+        <ul class="menu__items">
+            <li><input name="sort" type="radio"> number of pages</li>
+            <li><input name="sort" type="radio"> release date</li>
+            <li><input name="sort" type="radio"> author last name</li>
+        </ul>
+        <hr>
+        <h2>Show only</h2>
+        <ul class="menu__items">
+            <li class="item__pages">More than <input type="number" class="pages__sort"> pages</li>
+        </ul>
+        <hr>
+        <div class="menu__clear">
+            <button class="clear__button">Clear</button>
+        </div>
+    </div>
+</template>

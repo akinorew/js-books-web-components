@@ -1,0 +1,22 @@
+<template>
+    <style>
+        .main {
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            float: right;
+            justify-content: space-around;
+            list-style: none;
+            padding-left: 4rem;
+            width: 80%;
+        }
+
+        @media only screen and (max-width: 760px) {
+            .main {
+                padding-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+    <ol class="main"></ol>
+</template>

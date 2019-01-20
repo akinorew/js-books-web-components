@@ -1,0 +1,48 @@
+<template>
+    <style>
+        .book__cover {
+            background-color: rgba(251, 251, 251, 0.8);
+            display: none;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .book__cover,
+        .cover__wrapper {
+            left: 50%;
+            position: fixed;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cover__wrapper {
+            padding: 2rem;
+        }
+
+        .cover__image {
+            height: 656px;
+            width: 500px;
+        }
+
+        .cover__close {
+            border: 2px solid #999;
+            border-radius: 10rem;
+            cursor: pointer;
+            font-weight: 900;
+            font-size: 20px;
+            height: 2rem;
+            outline: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 2rem;
+        }
+    </style>
+    <div class="book__cover">
+        <div class="cover__wrapper">
+            <img class="cover__image">
+            <button class="cover__close">X</button>
+        </div>
+    </div>
+</template>

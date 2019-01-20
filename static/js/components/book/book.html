@@ -1,0 +1,84 @@
+<template>
+    <style>
+        :host {
+            counter-increment: inst;
+            padding-bottom: 3rem;
+            padding-top: 1rem;
+            position: relative;
+            text-align: center;
+            width: 30%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            :host {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (max-width: 550px) {
+            :host {
+                width: 100%;
+            }
+        }
+
+        :host:before {
+            color: #D8D7D7;
+            content: counter(inst);
+            font-size: 2rem;
+            font-weight: 700;
+            left: 6%;
+            position: absolute;
+            top: -0.65em;
+        }
+
+        hr {
+            border: 0;
+            border-top: 2px solid #EB3323;
+            height: 1px;
+            width: 40px;
+        }
+
+        .book__image {
+            cursor: pointer;
+            height: 236px;
+            width: 180px;
+        }
+
+        .book__title {
+            font-weight: bold;
+        }
+
+        .book__release-date,
+        .book__pages,
+        .book__link {
+            color: #999BA5;
+            display: block;
+            font-size: 10px;
+            font-style: italic;
+        }
+
+        .book__author {
+            display: block;
+            font-size: 12px;
+            font-style: italic;
+            line-height: 2rem;
+        }
+
+        .link__shop {
+            color: #EB3323;
+            cursor: pointer;
+            text-decoration: underline dashed #EB3323;
+        }
+    </style>
+    <li class="book">
+        <img class="book__image">
+        <p class="book__title"></p>
+        <hr>
+        <span class="book__author"></span>
+        <span class="book__release-date"></span>
+        <span class="book__pages"></span>
+        <div class="book__link">
+            <span class="link__text">Link: </span><a class="link__shop">shop</a>
+        </div>
+    </li>
+</template>
